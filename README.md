@@ -8,7 +8,7 @@ Authors can write multiple articles for the magazine, and every article is writt
 
 The application is protected with jwt authentication 😈
 
-***Required - *** User with ROLE_ADMIN needs to be placed in database before starting app
+**Required -** User with ROLE_ADMIN needs to be placed in database before starting app
 ```java
 INSERT INTO auth_users(username,password,enabled)
 	values('admin','encoded_password_using_bcrypt',TRUE);
