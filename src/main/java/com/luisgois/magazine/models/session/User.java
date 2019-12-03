@@ -18,8 +18,6 @@ import javax.persistence.Table;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
-import com.luisgois.magazine.dto.session.registration.RegistrationResponse;
-
 
 /**
  * @author luisgois

@@ -1,6 +1,6 @@
 spring:
  datasource:
-  url: ${DEV_POSTGRES_DB_HOST}:${DEV_POSTGRES_DB_PORT}/magazine
+  url: ${DEV_POSTGRES_DB_HOST}:${DEV_POSTGRES_DB_PORT}/Magazine
   username: ${DEV_POSTGRES_DB_USERNAME}
   password: ${DEV_POSTGRES_DB_PASSWORD}
   initialization-mode: always
