@@ -1,0 +1,12 @@
+spring:  
+  datasource:
+    initialization-mode: never
+  jpa:
+   hibernate:
+    ddl-auto: create-drop 
+   properties:
+    org:
+      hibernate:
+       flushMode: ALWAYS     
+jwt:
+ secret: test    

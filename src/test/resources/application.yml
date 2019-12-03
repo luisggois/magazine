@@ -1,0 +1,9 @@
+server:
+  servlet:
+    context-path: /magazine  
+spring:
+  jackson:
+    deserialization:
+      FAIL_ON_UNKNOWN_PROPERTIES: true
+  profiles:
+    active: test
