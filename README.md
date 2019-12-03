@@ -11,11 +11,8 @@ The application is protected with jwt authentication :+1:
 ## Usage
 
 ```bash
-import foobar
-
-foobar.pluralize('word') # returns 'words'
-foobar.pluralize('goose') # returns 'geese'
-foobar.singularize('phenomena') # returns 'phenomenon'
+cd project_dir
+mvn spring-boot:run
 ```
 
 ## Contributing
@@ -23,8 +20,6 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 
 Please make sure to update tests as appropriate.
 
-## License
-[MIT](https://choosealicense.com/licenses/mit/)
 
 
 
