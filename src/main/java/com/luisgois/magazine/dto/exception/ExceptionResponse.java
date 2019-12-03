@@ -19,7 +19,7 @@ public class ExceptionResponse {
 	private LocalDateTime timestamp;
 	private String message;
 	private Map<String, String> subErrors;
-	private Throwable debugMessage;
+	private String debugMessage;
 
 	private ExceptionResponse() {
 		timestamp = LocalDateTime.now();
@@ -37,7 +37,7 @@ public class ExceptionResponse {
 		this.message = message;
 	}
 	
-	public ExceptionResponse(HttpStatus status, String message, Throwable debugMessage) {
+	public ExceptionResponse(HttpStatus status, String message, String debugMessage) {
 		this();
 		this.status = status;
 		this.message = message;
@@ -110,14 +110,14 @@ public class ExceptionResponse {
 	/**
 	 * @return the debugMessage
 	 */
-	public Throwable getDebugMessage() {
+	public String getDebugMessage() {
 		return debugMessage;
 	}
 
 	/**
 	 * @param debugMessage the debugMessage to set
 	 */
-	public void setDebugMessage(Throwable debugMessage) {
+	public void setDebugMessage(String debugMessage) {
 		this.debugMessage = debugMessage;
 	}
 	

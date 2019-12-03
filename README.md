@@ -12,14 +12,13 @@ The application is protected with jwt authentication :+1:
 
 ```bash
 cd project_dir
-mvn spring-boot:run
+mvn spring-boot:run -Dspring-boot.run.profiles=dev
 ```
+
+## Current task lists
+
+- [] Finish tests for publication package
+- [] Update controllers logging
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
-
-Please make sure to update tests as appropriate.
-
-
-
-

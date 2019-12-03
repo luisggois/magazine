@@ -6,6 +6,10 @@ spring:
   initialization-mode: always
  jpa:
   hibernate:
-   ddl-auto: create   
+   ddl-auto: create  
+logging:
+  level:
+    root: INFO
 jwt:
- secret: ${SECRET}  
+ secret: ${SECRET}
+ 

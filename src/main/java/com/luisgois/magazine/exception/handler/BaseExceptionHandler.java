@@ -30,10 +30,10 @@ abstract class BaseExceptionHandler extends ResponseEntityExceptionHandler {
 	@Override
 	protected ResponseEntity<Object> handleHttpMessageNotReadable(HttpMessageNotReadableException ex, HttpHeaders headers, HttpStatus status, WebRequest request) {
 		String message = "Malformed JSON request";
-		logger.error(message);
+		logError(message,ex.getMessage());
 		return ResponseEntity
 				.status(HttpStatus.BAD_REQUEST)
-				.body(new ExceptionResponse(HttpStatus.BAD_REQUEST, message, ex));
+				.body(new ExceptionResponse(HttpStatus.BAD_REQUEST, message, ex.getMessage()));
 	}  	
 
 	@Override
@@ -45,10 +45,15 @@ abstract class BaseExceptionHandler extends ResponseEntityExceptionHandler {
 			String errorMessage = error.getDefaultMessage();
 			errors.put(fieldName, errorMessage);
 		});
-		logger.error(errors.toString());
+		logError(message,errors.toString());
 		return ResponseEntity
 				.status(HttpStatus.BAD_REQUEST)
 				.body(new ExceptionResponse(HttpStatus.BAD_REQUEST, message, errors));
+	}
+	
+	protected final void logError(String errorMessage, String debugMessage) {
+		String formattedMessage = String.format("%s::%s",errorMessage,debugMessage);
+		logger.error(formattedMessage);
 	}
 
 }
