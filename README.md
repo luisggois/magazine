@@ -1,8 +1,8 @@
 # Magazine
 
-Magazine is a Restful Web Service. 
-The service provides crud operations that enable the user to interact with publications related to that magazine.
-Authors can write multiple articles for the magazine, and every article is written by an unique author.
+Magazine is a Restful Web Service intended as a micro-service for a bigger application. 
+The service enables authenticated users to interact with publications related to that magazine.
+Interaction is limited to their authorization role.
 
 ## Security
 
