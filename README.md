@@ -1,6 +1,6 @@
 # Magazine
 
-Magazine is a Restful Web Service intended as a micro-service for a bigger application. 
+Magazine is a restful web service.
 The service enables authenticated users to interact with publications related to that magazine.
 Interaction is limited to their authorization role.
 
@@ -9,7 +9,7 @@ Interaction is limited to their authorization role.
 The application is protected with jwt authentication 😈
 
 **Required -** User with ROLE_ADMIN needs to be placed in database before starting app
-```java
+```sql
 INSERT INTO auth_users(username,password,enabled)
 	values('admin','encoded_password_using_bcrypt',TRUE);
 	
